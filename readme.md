@@ -1,6 +1,6 @@
 # Jogo da Velha - Tic-Tac-Toe (aleatório)
 
-<div style="display: flex; gap: 20px; margin-bottom: 20px;">
+<div style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
     <img style="height: 200px; object-fit: cover;" src="images/preview/note.jpg" alt="notebook preview">
     <img style="height: 200px" src="images/preview/mobile.jpg" alt="notebook preview">
 </div>
