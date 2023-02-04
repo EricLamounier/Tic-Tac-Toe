@@ -1,0 +1,293 @@
+@font-face {
+    font-family: kitten;
+    src: url(../fonts/Are-You-Kitten-Me/Are-You-Kitten-Me.otf);
+}
+
+@font-face {
+    font-family: rocko;
+    src: url(../fonts/rocko/RockoFLF-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #192a32;
+    font-family: 'rocko';
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+main #game {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+}
+
+#modalWinner {
+    width: 100%;
+    height: 200px;
+    background-color: #1f3540e8;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.712);
+    color: #31c4be;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    top: -50%;
+    z-index: -10;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#modalWinner #modalOptions {
+    display: flex;
+    gap: 10px;
+}
+
+#modalWinner #messageWon{
+    font-size: 13px;
+    color: #A1B7C2;
+}
+
+#modalWinner #winner {
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}
+
+#winner p {
+    height: 60px;
+    font-family: 'kitten';
+    font-size: 60px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#modalWinner #quit,
+#modalWinner #nextRound {
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #192B2F;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#modalWinner #quit {
+    width: 100px;
+    background-color: #A8BEC9;
+    box-shadow: 0px 2px 1px #6C8997;
+}
+
+#modalWinner #quit:hover {
+    background-color: #879eaa;
+}
+
+#modalWinner #nextRound {
+    width: 150px;
+    background-color: #F2B237;
+    box-shadow: 0px 2px 1px #CC8B13;
+}
+
+#modalWinner #nextRound:hover {
+    background-color: #c58f2c;
+}
+
+#fade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: -10;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#container {
+    width: 100%;
+    height: 100vw;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+}
+
+#container .box {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 53, 64);
+    box-shadow: 0px 4px 1px #0D1F29;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+#container .box svg {
+    width: 40%;
+    position: absolute;
+}
+
+#container .box .svgWinner path {
+    fill: #1f3540 !important;
+}
+
+#container .empty:hover {
+    background-color: #273e49 !important;
+}
+
+header#top {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px
+}
+
+header#top div {
+    width: 100%;
+    max-width: 170px;
+    height: 30px;
+}
+
+#players{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#turno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9cadb4;
+    background-color: #1f3540;
+    box-shadow: 0px 3px 1px #0D1F29;
+    border-radius: 5px;
+}
+
+#turno p {
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+#turno #currentPlayer{
+    font-family: 'kitten';
+    width: auto;
+    height: auto;
+}
+
+#top svg {
+    width: 25px;
+    height: 25px;
+}
+
+#top #restartGame{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+#restartGame img {
+    width: 32px;
+    height: 30px;
+    background-color: #b3c5ce;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 1.5px 0px #6C8997;
+}
+
+#restartGame:hover img {
+    background-color: #889eaa;
+}
+
+footer#bottom{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #293b44ec;
+}
+
+#bottom div {
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom div:nth-child(1){
+    background-color: #31c4be;
+}
+
+#bottom div:nth-child(2){
+    background-color: #a8bec9;
+}
+
+#bottom div:nth-child(3){
+    background-color: #f2b237;
+}
+
+@media (max-width: 400px) {
+    main {
+        display: block;
+    }
+
+    #modalWinner #winner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #winner span {
+        width: 150px;
+    }
+
+    #modalWinner #winner p{
+        font-size: 40px;
+    }
+
+    #modalWinner #winner span {
+        font-size: 25px;
+    }
+
+    #players svg {
+        width: 20px;
+    }
+
+    #turno p{
+        font-size: 11px;
+    }
+
+    footer#bottom {
+        font-size: 11px;
+    }
+}
+

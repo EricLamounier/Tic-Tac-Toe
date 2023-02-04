@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="text/ico" href="images/tic-tac-toe.ico">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <main>
+        <div id="modalWinner">
+            <p id="messageWon">You Won</p>
+            <div id="winner">
+                <p>X</p> <span>TAKES THE ROUND</span></div>
+            <div id="modalOptions">
+                <div id="quit" onclick="quit()">QUIT</div>
+                <div id="nextRound" onclick="nextRound()">NEXT ROUND</div>
+            </div>
+        </div>
+        <div id="fade"></div>
+        <div id="game">
+            <header id="top">
+                <div id="players" onclick="showModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" viewBox="1.41 1.41 252.9 252.9">
+                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                            <path d="M 13.4 88.492 L 1.508 76.6 c -2.011 -2.011 -2.011 -5.271 0 -7.282 L 69.318 1.508 c 2.011 -2.011 5.271 -2.011 7.282 0 L 88.492 13.4 c 2.011 2.011 2.011 5.271 0 7.282 L 20.682 88.492 C 18.671 90.503 15.411 90.503 13.4 88.492 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(42,199,190); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                            <path d="M 69.318 88.492 L 1.508 20.682 c -2.011 -2.011 -2.011 -5.271 0 -7.282 L 13.4 1.508 c 2.011 -2.011 5.271 -2.011 7.282 0 l 67.809 67.809 c 2.011 2.011 2.011 5.271 0 7.282 L 76.6 88.492 C 74.589 90.503 71.329 90.503 69.318 88.492 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(42,199,190); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm5 10c0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5 5 2.2 5 5z" fill="#EFB235" class="color000000 svgShape"/></svg>
+                </div>
+                <div id="turno">
+                    <div id=currentPlayer>X</div> <p>TURN</p>
+                </div>
+                <div id="restartGame" onclick="restart()">
+                    <img src="images/restartGame.svg" alt="restart game icon"/>
+                </div>
+            </header>
+            <div id="container">
+                <div data-i="1" class="box empty"></div>
+                <div data-i="2" class="box empty"></div>
+                <div data-i="3" class="box empty"></div>
+                <div data-i="4" class="box empty"></div>
+                <div data-i="5" class="box empty"></div>
+                <div data-i="6" class="box empty"></div>
+                <div data-i="7" class="box empty"></div>
+                <div data-i="8" class="box empty"></div>
+                <div data-i="9" class="box empty"></div>
+            </div>
+            <footer id="bottom">
+                <div id="winnerX">
+                    <p>X (YOU)</p>
+                    <p id="countX">0</p>
+                </div>
+                <div id="ties">
+                    <p>TIES</p>
+                    <p id="countTies">0</p>
+                </div>
+                <div id="winnerO">
+                    <p>O (CPU)</p>
+                    <p id="countO">0</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
