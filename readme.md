@@ -1,27 +1,9 @@
 # Jogo da Velha - Tic-Tac-Toe (aleatório)
 
-<style>
-    #preview {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-
-    #preview img:nth-child(1){
-        height: 200px;
-        object-fit: cover;
-    }
-
-    #preview img:nth-child(2){
-        height: 200px
-    }
-
-</style>
-<div id=preview>
-    <img src="images/preview/note.jpg" alt="notebook preview">
-    <img src="images/preview/mobile.jpg" alt="notebook preview">
+<div style="display: flex; gap: 20px; margin-bottom: 20px;">
+    <img style="height: 200px; object-fit: cover;" src="images/preview/note.jpg" alt="notebook preview">
+    <img style="height: 200px" src="images/preview/mobile.jpg" alt="notebook preview">
 </div>
-
 
 Projeto construído utilizando os conceitos básicos de HTML5, CSS3 e JavaScript.
 
