@@ -157,6 +157,11 @@ function setPlayer() {
 }
 
 function restart(){
+
+    document.getElementById('countX').innerHTML = '0'
+    document.getElementById('countO').innerHTML = '0'
+    document.getElementById('countTies').innerHTML = '0'
+
     player = true // true = X | false = O
     jogadasX = []
     jogadasO = []
@@ -177,7 +182,19 @@ function quit() {
 }
 
 function nextRound() {
-    restart()
+    player = true // true = X | false = O
+    jogadasX = []
+    jogadasO = []
+    cont = 0
+    winX = false
+    winO = false
+    celula.forEach( (e) => {
+        e.classList.remove('selected')
+        e.classList.add('empty')
+        e.innerHTML = ''
+        e.style.backgroundColor = '#1f3540'
+    })
+    document.getElementById('currentPlayer').innerHTML = 'X'
     hideModal()
 }
 
